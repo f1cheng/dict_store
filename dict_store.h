@@ -1,8 +1,6 @@
 #ifndef _DICT_STORE_H
 #define _DICT_STORE_H
 
-#include <stddef.h>
-
 typedef enum _KvType
 {
     KV_NULL,
