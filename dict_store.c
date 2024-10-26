@@ -1,18 +1,3 @@
-/*
- * dict string:
- *
- * {
- *  "name": "cheng xinnuo",
- *  "id": "0206230212",
- *  "children": 
- *      {
- *          "name1": "xin",
- *          "id1": "6"，
- *          “name2": "nuo",
- *          "id2": "10"
- *      }
- * }
- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
