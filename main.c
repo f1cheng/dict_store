@@ -4,7 +4,8 @@
 #include "dict_store.h"
 
 /* 1. change to use parameter passing out.
- * 2. gdb testing via VS code or terminal
+ * 2. gdb testing via VS code or terminal.
+ * 3. exception proper handling.
  * compiple: gcc -o main main.c dict_store.c
  */
 
@@ -38,18 +39,3 @@ int main(int argc, char **argv)
     dictStorePrint(&store);
     return 0;
 }
-
-/*
-below is fine, but asign in c, it's another story.
-
-dictStr={
-"name": "cf"
-}
-
-[root@iZbp1evissossq564e432eZ sw]# cat json.txt
-{
-"name": "cf"
-}
-[root@iZbp1evissossq564e432eZ sw]#
-
-*/
