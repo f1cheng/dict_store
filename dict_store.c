@@ -119,6 +119,13 @@ char  *dictParseString(KvParser *p)
         dictWalkOneStep(p);
         start = p->curOffset;
     }
+    else
+    {
+        char cc = dictPeek(p);
+        printf("Unexpect %c\n", cc);
+        return "";
+    }
+
     while (p->curOffset < p->bufLen)
     {
         if (p->buffer[p->curOffset] == '"' )
@@ -230,7 +237,7 @@ Kv *dictParseObject(KvParser *p)
         char ch = dictPeek(p);
         if (ch == '}')
         {
-            break;
+            break; 
         }
         else if (ch == ',')
         {
@@ -241,10 +248,9 @@ Kv *dictParseObject(KvParser *p)
         {
             break;
         }
-
         //next kv parser
         kv->next = kvCreate();
         p->cur = kv->next; 
     }
-    return firstKv;
+    return firstKv; 
 }
