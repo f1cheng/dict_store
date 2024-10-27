@@ -108,7 +108,7 @@ char  *dictParseString(KvParser *p)
     {
         char cc = dictPeek(p);
         printf("Unexpect %c\n", cc);
-        return "";
+        //return "";
     }
 
     while (p->curOffset < p->bufLen)
@@ -120,6 +120,7 @@ char  *dictParseString(KvParser *p)
         }
         else
         {
+            end = p->curOffset;
             p->curOffset++;
         }
     }
